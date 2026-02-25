@@ -1,0 +1,29 @@
+{
+  "name": "trading-view-indicator-extension",
+  "version": "1.5.14",
+  "description": "Trading View Indicator Extension SDK - Integration utilities",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
+  "files": [
+    "src",
+    "scripts/setup.js",
+    "scripts/postinstall.js",
+    "scripts/build.js"
+  ],
+  "bin": {
+    "trading-view-indicator-extension": "./scripts/setup.js"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "build": "node scripts/build.js",
+    "lint": "eslint src/**/*.js",
+    "test": "jest"
+  },
+  "license": "MIT",
+  "keywords": [
+    "utility",
+    "sdk",
+    "integration"
+  ],
+  "dependencies": {}
+}
