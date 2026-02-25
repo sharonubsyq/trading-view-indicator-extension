@@ -1,0 +1,44 @@
+# ─────────────────────────────────────────────────────────────────────────────
+#  trading-view-indicator-extension  |  Environment Configuration
+#  Copy this file to .env and fill in your values.
+#  Never commit .env to version control.
+# ─────────────────────────────────────────────────────────────────────────────
+
+# ── Server ────────────────────────────────────────────────────────────────────
+HOST=0.0.0.0
+PORT=5000
+DEBUG=false
+
+# Secret token — add to TradingView alert header X-Webhook-Secret
+# Generate one with: python -c "import secrets; print(secrets.token_hex(32))"
+WEBHOOK_SECRET=
+
+# ── Notifications ─────────────────────────────────────────────────────────────
+# Telegram bot (get token from @BotFather, chat_id from @userinfobot)
+TELEGRAM_TOKEN=
+TELEGRAM_CHAT_ID=
+
+# Slack incoming webhook URL
+SLACK_WEBHOOK=
+
+# Discord webhook URL
+DISCORD_WEBHOOK=
+
+# ── Data ──────────────────────────────────────────────────────────────────────
+# true = use synthetic random-walk data (no internet needed, for testing)
+USE_SYNTHETIC=false
+
+# Default TradingView interval when not specified in alert payload
+DEFAULT_INTERVAL=1h
+
+# ── Indicator settings ────────────────────────────────────────────────────────
+RSI_PERIOD=14
+RSI_OB=70
+RSI_OS=30
+BB_PERIOD=20
+BB_STD=2.0
+ST_PERIOD=10
+ST_MULT=3.0
+
+# ── Logging ───────────────────────────────────────────────────────────────────
+LOG_LEVEL=INFO

@@ -1,0 +1,12 @@
+# Core
+flask>=3.0.0
+python-dotenv>=1.0.0
+pandas>=2.2.0
+numpy>=1.26.0
+
+# Data
+yfinance>=0.2.40
+
+# Optional: production WSGI server (used by install.sh in prod mode)
+gunicorn>=21.2.0; sys_platform != "win32"
+waitress>=3.0.0;  sys_platform == "win32"

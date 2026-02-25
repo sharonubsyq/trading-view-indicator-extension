@@ -1,0 +1,39 @@
+[build-system]
+requires      = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name        = "trading-view-indicator-extension"
+version     = "1.0.0"
+description = "TradingView indicator extension — webhook server + RSI, MACD, Bollinger Bands, SuperTrend, VWAP signal engine with Telegram/Slack/Discord notifications"
+readme      = "README.md"
+requires-python = ">=3.10"
+license     = { text = "MIT" }
+
+dependencies = [
+    "flask>=3.0.0",
+    "python-dotenv>=1.0.0",
+    "pandas>=2.2.0",
+    "numpy>=1.26.0",
+    "yfinance>=0.2.40",
+]
+
+[project.optional-dependencies]
+prod = ["gunicorn>=21.2.0"]
+dev  = [
+    "pytest>=8.2",
+    "pytest-flask>=1.3",
+    "httpx>=0.27",
+    "black>=24.4",
+    "ruff>=0.4",
+]
+
+[project.scripts]
+tv-indicator = "main:main"
+
+[tool.ruff]
+line-length    = 100
+target-version = "py310"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
