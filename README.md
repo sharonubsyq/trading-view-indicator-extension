@@ -82,13 +82,6 @@ The installer automatically:
 - Copies `env_template.txt` → `.env`
 - Runs the full test suite to verify the install
 
-### Windows (native — no WSL)
-
-Double-click `install.bat` or run in Command Prompt:
-
-```bat
-install.bat
-```
 
 ---
 
